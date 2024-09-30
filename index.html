@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+
+    <style>
+        * {
+          padding: 0;
+          margin: 0;  
+        }
+
+        body {
+            background-color: #f8f7ff;
+            height: 100%;
+            padding-block: 5%;
+            
+        }
+
+        main {
+            margin: auto;
+            height: 75rem;
+            width: 50%; 
+            background-color: #b8b8ff;
+            border-radius: 1rem;
+            padding-block: 2rem;
+        }
+
+        h1 {
+            text-align: center; 
+            color: #4a34c8; 
+            padding-block: 2rem;
+            font-size: 2.5rem;
+        }
+
+        .form-title {
+            margin: auto;
+        }
+        
+        input[type="radio"]{
+            color: white;
+        }
+
+        .flex-field {
+            display: grid;
+            grid-template-columns: 25% 75%;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+            padding-inline: 1.3rem;
+            margin-bottom: 2rem;
+            
+        }
+
+        .grid-input {
+            flex-grow: 1;
+            font-size: 12px;
+            padding-block: 6px;
+            padding-inline: 4px;
+            box-sizing: border-box;
+            border-color: beige;
+            background-color: transparent;
+            border-color: transparent transparent black transparent;
+            
+
+        }
+
+        .grid-label {
+            text-align: right;
+            
+        }
+
+        .grid-select {
+            font-size: 12px;
+            padding-block: 6px 4px;
+            line-height: 4px;    
+        }
+
+        .checkbox-form {
+            padding-inline: 4rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .form-button {
+            background-color: #f8f7ff;
+            color: #9381ff;
+            border: 0px;
+            border-radius: 4px;
+            padding: 1rem 2.4rem
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <h1>REGISTRATION</h1>
+    <form action="action.php">
+
+        
+        <! -- Text Field -- >
+        <div class="flex-field">
+            <label for="username" class="grid-label">Username</label>
+            <input type="text" name="username" value="John Doe" required placeholder="What's your name?" minlength="3" maxlength="10" class="grid-input">
+        </div>
+
+        <! -- Email Field -- >
+        <div class="flex-field">
+            <label for="email" class="grid-label">Email</label>
+            <input type="email" name="username" placeholder="Put your email" class="grid-input">
+        </div>
+
+        <! -- Password Field -- >
+        <div class="flex-field">
+            <label for="password" class="grid-label">Password</label>
+            <input type="password" name="password" placeholder="Put your password" class="grid-input">
+        </div>
+
+        <! -- Number Field -- >
+        <div class="flex-field">
+            <label for="number" class="grid-label">Number</label>
+            <input type="number" name="number" class="grid-input">
+        </div>
+
+        <! -- Hidden Field -- >
+        <input type="hidden" value="abc1234" name="secret">
+
+        <div class="flex-field">
+            <label for="textarea" class="grid-label">Text Area</label>
+            <textarea name="address" id="" rows="5"></textarea>
+        </div>
+
+        <div class="flex-field">
+            <label for="date" class="grid-label">Date</label>
+            <input type="date" name="date">
+        </div>
+
+        <div class="flex-field">
+            <label for="datelocal" class="grid-label">Date Local</label>
+            <input type="datetime-local" name="date local">
+        </div>
+
+
+        
+        <div class="flex-field">
+            <label for="checkbox" class="grid-label">Checkbox</label>
+            <input type="checkbox" name="Skills" id="" value="Programming" <label for "Skills">Programming</label>
+            <input type="checkbox" name="Skills" id=""  value="Java" <label for "Skills">Java</label>
+            <input type="checkbox" name="Skills" id=""  value="Web" checked <label for "Skills">Web</label>
+        </div>
+
+        <div class="flex-field">
+            <label for="radio" class="grid-label">Radio</label>
+            <input type="radio" name="Skills" id="" value="Programming" <label for "Skills">Programming</label>
+            <input type="radio" name="Skills" id=""  value="Java" <label for "Skills">Java</label>
+            <input type="radio" name="Skills" id=""  value="Web" checked <label for "Skills">Web</label>
+        </div>
+
+        <div class="flex-field">
+            <label for="file" class="grid-label">File</label>
+            <input type="file" name="file-upload" id="" accept=".jpg,.png,.gif">
+        </div>
+
+        <div class="flex-field">
+            <label for="dropdown" class="grid-label">Dropdown</label>
+            <select name="year-level" id="year-level">
+            <option value="" disabled selected>--Select Year Level--</option>
+            <option value="1">First Year</option>
+            <option value="2">Second Year</option>
+            <option value="3">Third Year</option>
+            <option value="4">Fourth Year</option>
+            </select>
+        </div> 
+
+        <div class="flex-field">
+            <label for="groupdropdown" class="grid-label">Group Dropdown</label>
+            <select name="year-level" id="year-level">
+                <option value="">--Select Year Level--</option>
+                <optgroup label="Undergrad">
+                   <option value="1">First Year</option>
+                   <option value="2">Second Year</option>
+                   <option value="3" selected>Third Year</option>
+                   <option value="4">Fourth Year</option>
+                </optgroup>
+                <optgroup label="SHS">
+                   <option value="1">First Year</option>
+                   <option value="2">Second Year</option>
+                </optgroup>
+             </select>
+        </div>
+
+        <div class="flex-field">
+            <label for="button" class="grid-label">Button</label>
+            <input type="button" value="Button">
+        </div>
+
+        <div class="flex-field">
+            <label for="reset" class="grid-label">Reset</label>
+            <input type="Reset" value="Reset">
+        </div>
+
+        <! -- Submit Field -- >
+        <div class="flex-field">
+            <label for="submit" class="grid-label">Submit</label>
+            <input type="submit" value="Click Submit">
+        </div>
+
+
+    </form>
+
+</main>
+   
+    
+</body>
+</html>
